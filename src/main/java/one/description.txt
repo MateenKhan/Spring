@@ -1,0 +1,12 @@
+FrameWork: A largebody basically a unit of classes used to solve particular problem in specific domain
+Spring FrameWork developed by Rod Johnson in 2003
+Spring is a light weight framework
+Spring has many modules IOC, AOP, DAO, Contex, ORM, Web MVC
+
+
+------------------------------------------------------
+Inversion of control and Dependency Injection
+------------------------------------------------------
+These are the design patterns used to removed dependency from programming code. 
+This makes code easier to test and maintain
+
