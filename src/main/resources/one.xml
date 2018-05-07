@@ -4,8 +4,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans  
                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<bean id="student" class="one.Student">
+	<bean id="student" class="one.ioc.Student">
 		<property name="name" value="Mak"></property>
+	</bean>
+	
+	<bean id="s2" class="one.ioc.Student">
+		<property name="name">
+			<value>mateen</value>
+		</property>
 	</bean>
 
 </beans>  

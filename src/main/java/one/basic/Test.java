@@ -1,4 +1,4 @@
-package one;
+package one.basic;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
@@ -17,7 +17,6 @@ public class Test {
 		// The BeanFactory is responsible to return the bean.
 		// The XmlBeanFactory is the implementation class of the BeanFactory
 		BeanFactory factory = new XmlBeanFactory(resource);
-
 		Student student = (Student) factory.getBean("student");
 		student.displayInfo();
 	}

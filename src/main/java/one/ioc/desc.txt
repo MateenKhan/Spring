@@ -1,0 +1,12 @@
+Ioc Container is responsible for instantiate, configure and assemble the objects
+this container gets info from the xml file
+
+There are basically two types of containers
+1. BeanFactory
+2. ApplicationContext
+
+Application context extra features
+simple integration with spring AOP
+message resource for internationalization
+even propagation
+application layer specific context for web application

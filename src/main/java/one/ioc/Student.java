@@ -1,4 +1,4 @@
-package one;
+package one.ioc;
 
 public class Student {
 
