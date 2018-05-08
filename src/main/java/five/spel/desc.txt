@@ -1,0 +1,1 @@
+SPEL: spring expression language is used to manipulate the object graph at run time 
