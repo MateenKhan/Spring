@@ -1,1 +1,3 @@
-Message is: ${message}  
+Message is: ${message}
+
+<img src="${image}"/>   

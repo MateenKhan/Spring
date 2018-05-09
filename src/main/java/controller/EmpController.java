@@ -75,5 +75,6 @@ public class EmpController {
 		dao.delete(id);
 		return new ModelAndView("redirect:/viewemp/1");
 	}
+	
 
 }

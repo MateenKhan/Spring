@@ -7,4 +7,10 @@
 </form>
 
 <a href="empform">Add Employee</a>  
-<a href="viewemp/1">View Employees</a>  
+<a href="viewemp/1">View Employees</a>
+
+<br/>
+<form action="savefile" method="post" enctype="multipart/form-data">  
+Upload File: <input type="file" name="file"/>  
+<input type="submit" value="Upload File"/>  
+</form>    
