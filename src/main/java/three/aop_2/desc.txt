@@ -1,7 +1,0 @@
-basic AOP
-Proxy Factory bean class is given by spring
-it has two fields
-
-private Object target: business logic class(target)
-private List interceptorNames: list of interceptors (Advice)
-
