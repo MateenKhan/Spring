@@ -36,17 +36,33 @@ public class EmpDao {
 		return template.queryForObject(sql, new Object[] { id }, new BeanPropertyRowMapper<Emp>(Emp.class));
 	}
 
-	public List<Emp> getEmployees() {
-		return template.query("select * from Emp99", new RowMapper<Emp>() {
-			public Emp mapRow(ResultSet rs, int row) throws SQLException {
-				Emp e = new Emp();
-				e.setId(rs.getInt(1));
-				e.setName(rs.getString(2));
-				e.setSalary(rs.getFloat(3));
-				e.setDesignation(rs.getString(4));
-				return e;
-			}
-		});
-
-	}
+//	public List<Emp> getEmployees() {
+//		return template.query("select * from Emp99", new RowMapper<Emp>() {
+//			public Emp mapRow(ResultSet rs, int row) throws SQLException {
+//				Emp e = new Emp();
+//				e.setId(rs.getInt(1));
+//				e.setName(rs.getString(2));
+//				e.setSalary(rs.getFloat(3));
+//				e.setDesignation(rs.getString(4));
+//				return e;
+//			}
+//		});
+//
+//	}
+	
+	public List<Emp> getEmployees(int pageid,int total){
+		System.out.println("pageId:"+pageid+" total:"+total);
+	    String sql="select * from Emp99 limit "+(pageid-1)+","+total;
+	    System.out.println(sql);
+	    return template.query(sql,new RowMapper<Emp>(){  
+	        public Emp mapRow(ResultSet rs, int row) throws SQLException {  
+	            Emp e=new Emp();  
+	            e.setId(rs.getInt(1));  
+	            e.setName(rs.getString(2));  
+	            e.setSalary(rs.getFloat(3));  
+	            e.setDesignation(rs.getString(4));  
+	            return e;  
+	        }  
+	    });  
+	}  
 }

@@ -36,14 +36,19 @@ public class EmpController {
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public ModelAndView save(@ModelAttribute("emp") Emp emp) {
 		dao.save(emp);
-		return new ModelAndView("redirect:/viewemp");// will redirect to viewemp
+		return new ModelAndView("redirect:/viewemp/1");// will redirect to viewemp
 														// request mapping
 	}
 
 	/* It provides list of employees in model object */
-	@RequestMapping("/viewemp")
-	public ModelAndView viewemp() {
-		List<Emp> list = dao.getEmployees();
+	@RequestMapping("/viewemp/{pageid}")
+	public ModelAndView viewemp(@PathVariable int pageid) {
+		int total = 5;
+		if (pageid == 1) {
+		} else {
+			pageid = (pageid - 1) * total + 1;
+		}
+		List<Emp> list = dao.getEmployees(pageid, total);
 		return new ModelAndView("viewemp", "list", list);
 	}
 
@@ -61,14 +66,14 @@ public class EmpController {
 	@RequestMapping(value = "/editsave", method = RequestMethod.POST)
 	public ModelAndView editsave(@ModelAttribute("emp") Emp emp) {
 		dao.update(emp);
-		return new ModelAndView("redirect:/viewemp");
+		return new ModelAndView("redirect:/viewemp/1");
 	}
 
 	/* It deletes record for the given id in URL and redirects to /viewemp */
 	@RequestMapping(value = "/deleteemp/{id}", method = RequestMethod.GET)
 	public ModelAndView delete(@PathVariable int id) {
 		dao.delete(id);
-		return new ModelAndView("redirect:/viewemp");
+		return new ModelAndView("redirect:/viewemp/1");
 	}
 
 }

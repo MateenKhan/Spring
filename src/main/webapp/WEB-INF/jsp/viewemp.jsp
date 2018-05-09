@@ -18,10 +18,13 @@
 			<td>${emp.name}</td>
 			<td>${emp.salary}</td>
 			<td>${emp.designation}</td>
-			<td><a href="editemp/${emp.id}">Edit</a></td>
-			<td><a href="deleteemp/${emp.id}">Delete</a></td>
+			<td><a href="/Spring/editemp/${emp.id}">Edit</a></td>
+			<td><a href="/Spring/deleteemp/${emp.id}">Delete</a></td>
 		</tr>
 	</c:forEach>
 </table>
 <br />
 <a href="empform">Add New Employee</a>
+<a href="/Spring/viewemp/2">2</a>
+<a href="/Spring/viewemp/3">3</a>
+<a href="/Spring/viewemp/4">4</a>
