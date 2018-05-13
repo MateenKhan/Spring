@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+	<bean id="DefaultPin" abstract="true">
+		<property name="pin" value="999" />
+	</bean>
+	
+	<bean id="India" class="tweleve.Country" parent="DefaultPin">
+		<property name="name" value="India"></property> 
+	</bean>
+	<bean id="Australia" class="tweleve.Country" parent="DefaultPin">
+		<property name="pin" value="12345"></property> 
+		<property name="name" value="India"></property> 
+	</bean>
+
+</beans>

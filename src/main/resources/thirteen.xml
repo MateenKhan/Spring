@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- <bean id="CustomerBean" class="thirteen.Customer" dependency-check="simple"> -->
+	<!-- <bean id="CustomerBean" class="thirteen.Customer" dependency-check="objects"> -->
+	<bean id="CustomerBean" class="thirteen.Customer"
+		dependency-check="all">
+		<property name="action" value="buy" />
+		<property name="type" ref="1" />
+
+	</bean>
+
+	<bean id="PersonBean" class="thirteen.Person">
+		<property name="name" value="mkyong" />
+		<property name="address" value="address ABC" />
+		<property name="age" value="29" />
+	</bean>
+
+</beans>
