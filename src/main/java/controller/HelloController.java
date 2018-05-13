@@ -24,7 +24,19 @@ public class HelloController {
 
 		ModelAndView model = new ModelAndView();
 		model.addObject("title", "Spring Security Hello World");
-		model.addObject("message", "This is protected page!");
+		model.addObject("message", "This is protected page - Admin Page!");
+		model.setViewName("admin");
+
+		return model;
+
+	}
+
+	@RequestMapping(value = "/dba**", method = RequestMethod.GET)
+	public ModelAndView dbaPage() {
+
+		ModelAndView model = new ModelAndView();
+		model.addObject("title", "Spring Security Hello World");
+		model.addObject("message", "This is protected page - Database Page!");
 		model.setViewName("admin");
 
 		return model;
