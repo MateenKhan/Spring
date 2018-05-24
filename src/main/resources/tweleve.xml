@@ -13,7 +13,7 @@
 	</bean>
 	<bean id="Australia" class="tweleve.Country" parent="DefaultPin">
 		<property name="pin" value="12345"></property> 
-		<property name="name" value="India"></property> 
+		<property name="name" value="Australia"></property> 
 	</bean>
 
 </beans>
