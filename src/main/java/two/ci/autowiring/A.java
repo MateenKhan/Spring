@@ -4,7 +4,6 @@ public class A {
 	B b;
 	C c;
 
-	
 	public C getC() {
 		return c;
 	}
@@ -16,6 +15,7 @@ public class A {
 	A(B b) {
 		System.out.println("a one arg is created");
 	}
+
 	A() {
 		System.out.println("a is created");
 	}
@@ -34,7 +34,9 @@ public class A {
 
 	void display() {
 		print();
-		b.print();
-		c.print();
+		if (b != null)
+			b.print();
+		if (c != null)
+			c.print();
 	}
 }

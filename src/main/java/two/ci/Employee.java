@@ -10,15 +10,18 @@ public class Employee {
 
 	public Employee(int id) {
 		this.id = id;
+		System.out.println("one arg int");
 	}
 
 	public Employee(String name) {
 		this.name = name;
+		System.out.println("one arg string");
 	}
 
 	public Employee(int id, String name) {
 		this.id = id;
 		this.name = name;
+		System.out.println("two arg int,string");
 	}
 
 	void show() {
