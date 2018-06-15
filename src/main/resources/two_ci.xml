@@ -6,7 +6,16 @@
 
 	<bean id="emp" class="two.ci.Employee">
 		<constructor-arg value="10"></constructor-arg>
-		<constructor-arg value="asdf" ></constructor-arg>
+		<constructor-arg value="asdf"></constructor-arg>
 	</bean>
 
+	<bean id="emp2" class="two.ci.Employee">
+	</bean>
+
+	<bean id="emp3" class="two.ci.Employee">
+		<constructor-arg value="10" type="int"></constructor-arg>
+	</bean>
+	<bean id="emp4" class="two.ci.Employee">
+		<constructor-arg value="asdf"></constructor-arg>
+	</bean>
 </beans>  

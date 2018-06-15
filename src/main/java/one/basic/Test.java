@@ -18,6 +18,10 @@ public class Test {
 		// The XmlBeanFactory is the implementation class of the BeanFactory
 		BeanFactory factory = new XmlBeanFactory(resource);
 		Student student = (Student) factory.getBean("student");
+		student.setName("khan");
+		System.out.println(student.getName());
+		Student student2 = (Student) factory.getBean("s2");
+		System.out.println(student2.getName());
 		student.displayInfo();
 	}
 }
